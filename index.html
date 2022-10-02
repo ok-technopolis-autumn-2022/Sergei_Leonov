@@ -1,42 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" style="margin: auto; display: table">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>todos</title>
 </head>
-<body style="background: #f2f2f2; display: table-cell; vertical-align: center">
+<body>
     <header>
-        <h1 style="color: #CCCCCC; font-family: 'Roboto',serif; line-height: 21px;
-        font-size: 100px; font-weight: 100; letter-spacing: -2.5px; text-align: center">todos</h1>
+        <h1>todos</h1>
     </header>
     <main>
-        <section style="width: 558px; height: 402px; top: 110px; left: 221px;
-                        background: #ffffff; alignment: center">
+        <section>
             <label>
-                <img src="icons/select-all.png" alt="select-all" style="padding-left: 17px; padding-right: 17px; padding-top: 27px">
-                <input placeholder="What needs to be done?"
-                       style="width: 272px; height: 21px; top: 130px; left: 281px;
-                       color: #E6E6E6; font-size: 24px; font-family: 'Roboto',serif;
-                       font-style: italic; line-height: 21px; letter-spacing: -0.6px;
-                       border-width: 0">
+                <button>select</button>
+                <input placeholder="What needs to be done?">
             </label>
-            <ul style="list-style-image: url(icons/Ellipse.png); padding-left: 55px;
-                       font-size: 24px; font-family: 'Roboto',serif;
-                       line-height: 21px; letter-spacing: -0.6px; color: #666666;">
-                <li style="width: 562px; height: 64px; padding-left: 10px;">HTML</li>
-                <li style="width: 562px; height: 64px; padding-left: 10px;
-                ">CSS</li>
-                <li style="width: 562px; height: 64px; padding-left: 10px;
-                ">JS</li>
-                <li style="width: 562px; height: 64px; padding-left: 10px;
-                ">JS tools</li>
+            <ul>
+                <li>
+                    <button>done</button>
+                    HTML
+                    <button>delete</button>
+                </li>
+                <li>
+                    <button>done</button>
+                    CSS
+                    <button>delete</button>
+                </li>
+                <li>
+                    <button>done</button>
+                    JS
+                    <button>delete</button>
+                </li>
+                <li>
+                    <button>done</button>
+                    JS tools
+                    <button>delete</button>
+                </li>
             </ul>
-            <div style="display: flex; flex-direction: row; justify-content: flex-start; padding-top: 20px">
+            <div>
                 <span>4 items left</span>
-                <button style="">All</button>
-                <button style="">Active</button>
-                <button style="">Completed</button>
-                <button style="">Clear completed</button>
+                <button>All</button>
+                <button>Active</button>
+                <button>Completed</button>
+                <button >Clear completed</button>
             </div>
         </section>
     </main>
