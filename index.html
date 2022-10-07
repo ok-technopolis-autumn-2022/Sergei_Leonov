@@ -5,47 +5,78 @@
     <title>todos</title>
 </head>
 <body>
-    <header>
+    <header role="banner">
         <h1>todos</h1>
     </header>
     <main>
         <section>
-            <button>select</button>
-            <input type="text" placeholder="What needs to be done?">
+            <div>
+                <button>select</button>
+                <input type="text" placeholder="What needs to be done?" aria-label="add todo">
+            </div>
         </section>
         <section>
-            <ul>
+            <ul type="none">
                 <li>
-                    <input type="checkbox">done</input>
-                    <span>HTML</span>
-                    <button>delete</button>
+                    <div>
+                        <input type="checkbox" aria-label="Completed task: HTML">
+                        <span>HTML</span>
+                        <button>Delete task</button>
+                    </div>
+                    <div>
+                        <input type="text" value="HTML" aria-label="Edit task: HTML" hidden="hidden">
+                    </div>
                 </li>
                 <li>
-                    <input type="checkbox">done</input>
-                    <span>CSS</span>
-                    <button>delete</button>
+                    <div>
+                        <input type="checkbox" aria-label="Completed task: CSS">
+                        <span>CSS</span>
+                        <button>Delete task</button>
+                    </div>
+                    <div>
+                        <input type="text" value="CSS" aria-label="Edit task: CSS" hidden="hidden">
+                    </div>
                 </li>
                 <li>
-                    <input type="checkbox">done</input>
-                    <span>JS</span>
-                    <button>delete</button>
+                    <div>
+                        <input type="checkbox" aria-label="Completed task: JS">
+                        <span>JS</span>
+                        <button>Delete task</button>
+                    </div>
+                    <div>
+                        <input type="text" value="JS" aria-label="Edit task: JS" hidden="hidden">
+                    </div>
                 </li>
                 <li>
-                    <input type="checkbox">done</input>
-                    <span>JS tools</span>
-                    <button>delete</button>
+                    <div>
+                        <input type="checkbox" aria-label="Completed task: JS tool">
+                        <span>JS tool</span>
+                        <button>Delete task</button>
+                    </div>
+                    <div>
+                        <input type="text" value="JS tool" aria-label="Edit task: JS tool" hidden="hidden">
+                    </div>
                 </li>
             </ul>
         </section>
     </main>
     <footer>
         <span>4 items left</span>
-        <div>
-            <button>All</button>
-            <button>Active</button>
-            <button>Completed</button>
-            <button >Clear completed</button>
-        </div>
+        <span role="radiogroup" aria-label="todos display mode">
+            <label>
+                <input type="radio" aria-label="all todos" checked>
+                All
+            </label>
+            <label>
+                <input type="radio" aria-label="active todos">
+                Active
+            </label>
+            <label>
+                <input type="radio" aria-label="competed todos">
+                Completed
+            </label>
+        </span>
+        <button>Clear completed</button>
     </footer>
 </body>
 </html>
