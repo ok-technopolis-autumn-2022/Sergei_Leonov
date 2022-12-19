@@ -2,81 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap"
+          rel="stylesheet">
     <title>todos</title>
 </head>
 <body>
-    <header role="banner">
-        <h1>todos</h1>
+    <header class="todo-header" role="banner">
+        <h1 class="todo-title">todos</h1>
     </header>
-    <main>
-        <section>
-            <div>
-                <button>select</button>
-                <input type="text" placeholder="What needs to be done?" aria-label="add todo">
-            </div>
-        </section>
-        <section>
-            <ul type="none">
-                <li>
-                    <div>
-                        <input type="checkbox" aria-label="Completed task: HTML">
-                        <span>HTML</span>
-                        <button>Delete task</button>
-                    </div>
-                    <div>
-                        <input type="text" value="HTML" aria-label="Edit task: HTML" hidden="hidden">
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <input type="checkbox" aria-label="Completed task: CSS">
-                        <span>CSS</span>
-                        <button>Delete task</button>
-                    </div>
-                    <div>
-                        <input type="text" value="CSS" aria-label="Edit task: CSS" hidden="hidden">
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <input type="checkbox" aria-label="Completed task: JS">
-                        <span>JS</span>
-                        <button>Delete task</button>
-                    </div>
-                    <div>
-                        <input type="text" value="JS" aria-label="Edit task: JS" hidden="hidden">
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <input type="checkbox" aria-label="Completed task: JS tool">
-                        <span>JS tool</span>
-                        <button>Delete task</button>
-                    </div>
-                    <div>
-                        <input type="text" value="JS tool" aria-label="Edit task: JS tool" hidden="hidden">
-                    </div>
-                </li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <span>4 items left</span>
-        <span role="radiogroup" aria-label="todos display mode">
-            <label>
-                <input type="radio" aria-label="all todos" checked>
-                All
+    <div class="main-body">
+        <main>
+            <section>
+                <div class="input-task">
+                    <button class="select-all" title="select all"></button>
+                    <input class="input-field" type="text" placeholder="What needs to be done?" aria-label="add todo">
+                </div>
+            </section>
+            <section class="section-of-tasks">
+                <ul class="list-of-tasks">
+                    <li class="todo-task">
+                        <input id="check1" class="checkbox" type="checkbox">
+                        <label class="new-checkbox" for="check1"> </label>
+                        <input class="todo-task-text" type="text" value="HTML">
+                        <button class="delete-task"></button>
+                    </li>
+                    <li class="todo-task">
+                        <input id="check2" class="checkbox" type="checkbox">
+                        <label class="new-checkbox" for="check2"> </label>
+                        <input class="todo-task-text" type="text" value="CSS">
+                        <button class="delete-task"></button>
+                    </li>
+                    <li class="todo-task">
+                        <input id="check3" class="checkbox" type="checkbox">
+                        <label class="new-checkbox" for="check3"> </label>
+                        <input class="todo-task-text" type="text" value="JS">
+                        <button class="delete-task"></button>
+                    </li>
+                    <li class="todo-task">
+                        <input id="check4" class="checkbox" type="checkbox">
+                        <label class="new-checkbox" for="check4"> </label>
+                        <input class="todo-task-text" type="text" value="JS tools">
+                        <button class="delete-task"></button>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer class="footer">
+            <span class="items-left">4 items left</span>
+            <span role="radiogroup" aria-label="todos display mode" class="tasks-filter">
+            <label class="radio-button">
+                <input class="radio-input" id="radio1" type="radio" aria-label="all todos" checked>
+                <label class="radio-text" for="radio1">All</label>
             </label>
-            <label>
-                <input type="radio" aria-label="active todos">
-                Active
+            <label class="radio-button">
+                <input class="radio-input" id="radio2" type="radio" aria-label="active todos">
+                <label class="radio-text" for="radio2">Active</label>
             </label>
-            <label>
-                <input type="radio" aria-label="competed todos">
-                Completed
+            <label class="radio-button">
+                <input class="radio-input" id="radio3" type="radio" aria-label="competed todos">
+                <label class="radio-text" for="radio3">Completed</label>
             </label>
         </span>
-        <button>Clear completed</button>
-    </footer>
+            <button class="clear-completed">Clear completed</button>
+        </footer>
+    </div>
 </body>
 </html>
